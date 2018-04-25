@@ -11,7 +11,7 @@ body {
   }
   
   .filler {
-    background: #20B7AF;
+    background: rgb(183, 130, 32);
     position: absolute;
     bottom: 50%;
     top: 0;

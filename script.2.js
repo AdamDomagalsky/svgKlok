@@ -1,34 +1,35 @@
 var hands2 = [];
-hands2.push(document.querySelector('#secondhand3 > *'));
-hands2.push(document.querySelector('#minutehand3 > *'));
-hands2.push(document.querySelector('#hourhand3 > *'));
+hands2.push(document.querySelector('#secondhand2 > *'));
+hands2.push(document.querySelector('#minutehand2 > *'));
+hands2.push(document.querySelector('#hourhand2 > *'));
 
-var cx = 130;
-var cy = 125;
+var cx2 = 70;
+var cy2 = 125;
 
-function shifter(val) {
-  return [val, cx, cy].join(' ');
+function shifter2(val) {
+  return [val, cx2, cy2].join(' ');
 }
 
-var date = new Date();
-var hoursAngle = 360 * date.getHours() / 12 + date.getMinutes() / 2;
-var minuteAngle = 360 * date.getMinutes() / 60;
-var secAngle = 360 * date.getSeconds() / 60;
+var date2 = new Date();
+var hoursAngle2 = 360 * (date2.getHours()-6) / 12 + date2.getMinutes() / 2;
+var minuteAngle2 = 360 * (date2.getMinutes()+5) / 60;
+var secAngle2 = 360 *( date2.getSeconds() + 5) / 60;
 
-hands2[0].setAttribute('from', shifter(secAngle));
-hands2[0].setAttribute('to', shifter(secAngle + 360));
-hands2[1].setAttribute('from', shifter(minuteAngle));
-hands2[1].setAttribute('to', shifter(minuteAngle + 360));
-hands2[2].setAttribute('from', shifter(hoursAngle));
-hands2[2].setAttribute('to', shifter(hoursAngle + 360));
+hands2[0].setAttribute('from', shifter2(secAngle2));
+hands2[0].setAttribute('to', shifter2(secAngle2 + 360));
+hands2[1].setAttribute('from', shifter2(minuteAngle2));
+hands2[1].setAttribute('to', shifter2(minuteAngle2 + 360));
+hands2[2].setAttribute('from', shifter2(hoursAngle2));
+hands2[2].setAttribute('to', shifter2(hoursAngle2 + 360));
 
 for(var i = 1; i <= 12; i++) {
-  var el = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-  el.setAttribute('x1', '100');
-  el.setAttribute('y1', '30');
-  el.setAttribute('x2', '100');
-  el.setAttribute('y2', '40');
-  el.setAttribute('transform', 'rotate(' + (i*360/12) + ' 100 100)');
-  el.setAttribute('style', 'stroke: #ffffff;');
-  document.querySelector('.watch3').appendChild(el);
+  var el2 = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+  el2.setAttribute('id','line2');
+  el2.setAttribute('x1', '100');
+  el2.setAttribute('y1', '30');
+  el2.setAttribute('x2', '100');
+  el2.setAttribute('y2', '40');
+  el2.setAttribute('transform', 'rotate(' + (i*360/12) + ' 100 100)');
+  el2.setAttribute('style', 'stroke: #ffffff;');
+  document.querySelector('#watch2').appendChild(el2);  
 }

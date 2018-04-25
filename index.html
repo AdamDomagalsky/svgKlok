@@ -1,129 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=1, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="1">
-    <title>1</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="1">
+	<title>Clock</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
 
 </head>
+
 <body>
 
-        <div class="filler"></div>
-        <svg class="watch1" width="200" height="200">
-        
-            <filter id="innerShadow" x="-20%" y="-20%" width="140%" height="140%">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
-                <feOffset in="blur" dx="2.5" dy="2.5"/>
-            </filter>
-        
-            <g>
-                <circle id="shadow" style="fill:rgba(0,0,0,0.1)" cx="97" cy="100" r="87" filter="url(#innerShadow)"></circle>
-                <circle id="circle" style="stroke: #FFF; stroke-width: 12px; fill:#20B7AF" cx="100" cy="100" r="80"></circle>
-                <circle id="circle" style="stroke: #FFF; stroke-width: 2px; fill:rgb(92, 183, 32)" cx="70" cy="125" r="20"></circle>
-                <circle id="circle" style="stroke: #FFF; stroke-width: 2px; fill:rgb(183, 32, 65)" cx="130" cy="125" r="20"></circle>
-            </g>
+	<div class="filler"></div>
+	<svg width="200" height="200">
 
-            <svg class="watch2" width="200" height="200">
-                <g>
-                    <line x1="70" y1="125" x2="57" y2="125" transform="rotate(80 100 100)" style="stroke-width: 2px; stroke: #fffbf9;" id="hourhand2">
-                        <animatetransform attributeName="transform"
-                                          attributeType="XML"
-                                          type="rotate"
-                                          dur="43200s"
-                                          repeatCount="indefinite"/>
-                    </line>
-                    <line x1="70" y1="125" x2="60" y2="110" style="stroke-width: 2px; stroke: #fdfdfd;" id="minutehand2">
-                        <animatetransform attributeName="transform"
-                                          attributeType="XML"
-                                          type="rotate"
-                                          dur="3600s"
-                                          repeatCount="indefinite"/>
-                    </line>
-                    <line x1="70" y1="125" x2="60" y2="110" style="stroke-width: 1px; stroke: rgb(223, 21, 21);" id="secondhand2">
-                        <animatetransform attributeName="transform"
-                                          attributeType="XML"
-                                          type="rotate"
-                                          dur="60s"
-                                          repeatCount="indefinite"/>
-                    </line>
-                </g>
-                <circle id="center" style="fill:rgb(138, 42, 18); stroke: rgb(17, 175, 167); stroke-width: 1px;" cx="70" cy="125" r="1"></circle>
-            </svg>
-    
-          
-    
-            
-            
-            <svg class="watch3" width="200" height="200">
-            
-                <!-- <filter id="innerShadow" x="-20%" y="-20%" width="140%" height="140%">
-                    <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
-                    <feOffset in="blur" dx="2.5" dy="2.5"/>
-                </filter> -->
-            
-                <g>
-                    <!-- <circle id="shadow" style="fill:rgba(0,0,0,0.1)" cx="97" cy="100" r="87" filter="url(#innerShadow)"></circle> -->
-                </g>
-               
-                <g>
-                    <line x1="130" y1="125" x2="120" y2="120" transform="rotate(80 100 100)" style="stroke-width: 2px; stroke: #fffbf9;" id="hourhand3">
-                        <animatetransform attributeName="transform"
-                                          attributeType="XML"
-                                          type="rotate"
-                                          dur="43200s"
-                                          repeatCount="indefinite"/>
-                    </line>
-                    <line x1="130" y1="125" x2="120" y2="110" style="stroke-width: 2px; stroke: #110e0e;" id="minutehand3">
-                        <animatetransform attributeName="transform"
-                                          attributeType="XML"
-                                          type="rotate"
-                                          dur="3600s"
-                                          repeatCount="indefinite"/>
-                    </line>
-                    <line x1="130" y1="125" x2="120" y2="110" style="stroke-width: 1px; stroke: rgb(56, 209, 10);" id="secondhand3">
-                        <animatetransform attributeName="transform"
-                                          attributeType="XML"
-                                          type="rotate"
-                                          dur="60s"
-                                          repeatCount="indefinite"/>
-                    </line>
-                </g>
-    
-                <circle id="center" style="fill:rgb(138, 42, 18); stroke: rgb(17, 175, 167); stroke-width: 1px;" cx="130" cy="125" r="1"></circle>
-            </svg>
+		<filter id="innerShadow" x="-20%" y="-20%" width="140%" height="140%">
+			<feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" />
+			<feOffset in="blur" dx="2.5" dy="2.5" />
+		</filter>
 
-            <g>
-                <line x1="100" y1="100" x2="100" y2="55" transform="rotate(80 100 100)" style="stroke-width: 3px; stroke: #fffbf9;" id="hourhand">
-                    <animatetransform attributeName="transform"
-                                      attributeType="XML"
-                                      type="rotate"
-                                      dur="43200s"
-                                      repeatCount="indefinite"/>
-                </line>
-                <line x1="100" y1="100" x2="100" y2="40" style="stroke-width: 4px; stroke: #fdfdfd;" id="minutehand">
-                    <animatetransform attributeName="transform"
-                                      attributeType="XML"
-                                      type="rotate"
-                                      dur="3600s"
-                                      repeatCount="indefinite"/>
-                </line>
-                <line x1="100" y1="100" x2="100" y2="30" style="stroke-width: 2px; stroke: #C1EFED;" id="secondhand">
-                    <animatetransform attributeName="transform"
-                                      attributeType="XML"
-                                      type="rotate"
-                                      dur="60s"
-                                      repeatCount="indefinite"/>
-                </line>
-            </g>
-            <circle id="center" style="fill:#128A86; stroke: #C1EFED; stroke-width: 2px;" cx="100" cy="100" r="3"></circle>
+		<g>
+			<circle id="shadow" style="fill:rgba(175, 8, 8, 0.1)" cx="97" cy="100" r="87" filter="url(#innerShadow)"></circle>
+			<circle id="circle" style="stroke: #FFF; stroke-width: 12px; fill:rgb(93, 94, 92)" cx="100" cy="100" r="80"></circle>
+			<circle id="circle" style="stroke: #FFF; stroke-width: 2px; fill:rgb(255, 123, 0)" cx="70" cy="125" r="20"></circle>
+			<circle id="circle" style="stroke: #FFF; stroke-width: 2px; fill:rgba(183, 32, 65, 0.603)" cx="130" cy="125" r="20"></circle>
+		</g>
 
-        </svg>
+			<g id="watch2">
+				<line x1="70" y1="125" x2="57" y2="125" transform="rotate(80 100 100)" style="stroke-width: 2px; stroke: #fffbf9;" id="hourhand2">
+					<animatetransform attributeName="transform" attributeType="XML" type="rotate" dur="43200s" repeatCount="indefinite" />
+				</line>
+				<line x1="70" y1="125" x2="60" y2="110" style="stroke-width: 2px; stroke: #fdfdfd;" id="minutehand2">
+					<animatetransform attributeName="transform" attributeType="XML" type="rotate" dur="360s" repeatCount="indefinite" />
+				</line>
+				<line x1="70" y1="125" x2="60" y2="110" style="stroke-width: 1px; stroke: rgb(223, 21, 21);" id="secondhand2">
+					<animatetransform attributeName="transform" attributeType="XML" type="rotate" dur="60s" repeatCount="indefinite" />
+				</line>
+			</g>
+			
+			<circle id="center" style="fill:rgb(138, 42, 18); stroke: rgb(44, 51, 51); stroke-width: 1px;" cx="70" cy="125" r="1"></circle>
 
-    
+			<g id="watch3">
+				<line x1="130" y1="125" x2="117" y2="120" transform="rotate(80 100 100)" style="stroke-width: 2px; stroke: #fffbf9;" id="hourhand3">
+					<animatetransform attributeName="transform" attributeType="XML" type="rotate" dur="43200s" repeatCount="indefinite" />
+				</line>
+				<line x1="130" y1="125" x2="120" y2="110" style="stroke-width: 2px; stroke: #926c6c;" id="minutehand3">
+					<animatetransform attributeName="transform" attributeType="XML" type="rotate" dur="360s" repeatCount="indefinite" />
+				</line>
+				<line x1="130" y1="125" x2="120" y2="110" style="stroke-width: 1px; stroke: rgb(78, 99, 219);" id="secondhand3">
+					<animatetransform attributeName="transform" attributeType="XML" type="rotate" dur="60s" repeatCount="indefinite" />
+				</line>
+			</g>
+
+			<circle id="center" style="fill:rgb(138, 42, 18); stroke: rgb(54, 59, 59); stroke-width: 1px;" cx="130" cy="125" r="1"></circle>
+
+			<g id="watch1">
+				<line x1="100" y1="100" x2="100" y2="55" transform="rotate(80 100 100)" style="stroke-width: 3px; stroke: #fffbf9;" id="hourhand1">
+					<animatetransform attributeName="transform" attributeType="XML" type="rotate" dur="43200s" repeatCount="indefinite" />
+				</line>
+				<line x1="100" y1="100" x2="100" y2="40" style="stroke-width: 4px; stroke: #fdfdfd;" id="minutehand1">
+					<animatetransform attributeName="transform" attributeType="XML" type="rotate" dur="360s" repeatCount="indefinite" />
+				</line>
+				<line x1="100" y1="100" x2="100" y2="30" style="stroke-width: 2px; stroke: rgb(255, 255, 255);" id="secondhand1">
+					<animatetransform attributeName="transform" attributeType="XML" type="rotate" dur="60s" repeatCount="indefinite" />
+				</line>
+			</g>
+			<circle id="center" style="fill:#128A86; stroke: #C1EFED; stroke-width: 2px;" cx="100" cy="100" r="3"></circle>
+
+	</svg>
+
+
 </body>
-<script src="script.js"></script>
 <script src="script.1.js"></script>
 <script src="script.2.js"></script>
+<script src="script.3.js"></script>
 </html>
